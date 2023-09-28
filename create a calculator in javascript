@@ -1,0 +1,73 @@
+# calculator
+/**
+ * Calculator class that performs basic arithmetic operations.
+ */
+class Calculator {
+    /**
+     * Adds two numbers.
+     *
+     * @param {number} a - The first number.
+     * @param {number} b - The second number.
+     * @returns {number} The sum of the two numbers.
+     */
+    add(a, b) {
+        return a + b;
+    }
+
+    /**
+     * Subtracts two numbers.
+     *
+     * @param {number} a - The first number.
+     * @param {number} b - The second number.
+     * @returns {number} The difference between the two numbers.
+     */
+    subtract(a, b) {
+        return a - b;
+    }
+
+    /**
+     * Multiplies two numbers.
+     *
+     * @param {number} a - The first number.
+     * @param {number} b - The second number.
+     * @returns {number} The product of the two numbers.
+     */
+    multiply(a, b) {
+        return a * b;
+    }
+
+    /**
+     * Divides two numbers.
+     *
+     * @param {number} a - The dividend.
+     * @param {number} b - The divisor.
+     * @returns {number} The quotient of the division.
+     * @throws {Error} Throws an error if the divisor is zero.
+     */
+    divide(a, b) {
+        if (b === 0) {
+            throw new Error("Cannot divide by zero.");
+        }
+        return a / b;
+    }
+}
+
+// Usage Example for Calculator
+
+const calculator = new Calculator();
+
+const sum = calculator.add(5, 3);
+console.log(`Sum: ${sum}`);
+
+const difference = calculator.subtract(10, 4);
+console.log(`Difference: ${difference}`);
+
+const product = calculator.multiply(2, 6);
+console.log(`Product: ${product}`);
+
+try {
+    const quotient = calculator.divide(10, 2);
+    console.log(`Quotient: ${quotient}`);
+} catch (error) {
+    console.error(error.message);
+}
